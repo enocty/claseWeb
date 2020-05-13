@@ -1,6 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<script src="https://www.google.com/recaptcha/api.js?render=6Lep0vYUAAAAAEUg08td249UhcRy4xdWl4LUU70r"></script>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
 <title>Videoteca</title>
 <meta http-equiv="Content-Language" content="English" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -47,6 +50,7 @@
   <INPUT TYPE="PASSWORD" NAME="PASWD" REQUIRED />
   <br /><br />
  <INPUT TYPE="SUBMIT" NAME="ENVIAR" VALOR=" ENTRAR " />
+<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
   
   </FORM>
   <a href="Registrarse.php">Registro</a>
@@ -91,4 +95,9 @@ CSS ejemplo de <a href="http://www.free-css-templates.com/">Free CSS Templates</
 </div>
 
 </body>
+<script>
+grecaptcha.ready(function() {
+    grecaptcha.execute('6Lep0vYUAAAAAEUg08td249UhcRy4xdWl4LUU70r', {action: 'homepage'}).then(function(token) {});
+});
+</script>
 </html>
