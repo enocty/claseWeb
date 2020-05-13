@@ -48,9 +48,9 @@ $masaristas="";
 for($i=2; $i<=$numAlumnos; $i++){
   if ($promedio[$i]>=9) {
      $masaristas=$masaristas."{from: $i, to: 1, value: $promedio[$i]/4, label: '$promedio[$i]', font: {color:'green', face: 'times new roman'}},";
-  }elseif ($promedio[$i]>=8 && $promedio[$i]>=8.999) {
+  }elseif ($promedio[$i]>=8 && $promedio[$i]<=8.999) {
     $masaristas=$masaristas."{from: $i, to: 1, value: $promedio[$i]/4, label: '$promedio[$i]', font: {color:'yellow', face: 'times new roman'}},";
-  }elseif ($promedio[$i]>=6 && $promedio[$i]>=7.999) {
+  }elseif ($promedio[$i]>=6 && $promedio[$i]<=7.999) {
      $masaristas=$masaristas."{from: $i, to: 1, value: $promedio[$i]/4, label: '$promedio[$i]', font: {color:'orange', face: 'times new roman'}},";
   }else{
     $masaristas=$masaristas."{from: $i, to: 1, value: $promedio[$i]/4, label: '$promedio[$i]', font: {color:'red', face: 'times new roman'}},";
